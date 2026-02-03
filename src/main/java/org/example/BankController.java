@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
-import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -58,5 +57,27 @@ public class BankController {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
+    @Transactional
+    @PostMapping(value = "/balance/{id}")
+    @Operation(summary = "Запрос снятия денег с баланса пользователя по его ID")
+    public ResponseEntity<Double> takeMoney(@PathVariable(name = "id") Long id, @RequestParam("sum") Double sum) {
+        Optional<User> optionalUser = userService.findUserById(id);
+        if (optionalUser.isPresent()) {
+            User user = optionalUser.get();
+            if (sum > 0.0 && user.getBalance() - sum > 0.0) {
+                user.setBalance(user.getBalance() - sum);
+                LocalDate date = LocalDate.now();
+
+                userService.save(user);
+                logger.info("Снятие со счёта пользователя " + user.getName() + " " + sum + " $ прошло успешно!");
+                return new ResponseEntity<>(user.getBalance(), HttpStatus.OK);
+            }
+            logger.info("Введёная сумма:" + sum + " меньше 0, либо у пользователя не хватает средств на счёте");
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+        logger.info("Пользователь с ID:" + id + " не найден");
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+
+    }
 
 }

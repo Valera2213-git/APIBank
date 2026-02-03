@@ -79,3 +79,30 @@
 2026-02-03 21:00:58.916  INFO 17700 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-02-03 21:00:58.918  INFO 17700 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-02-03 21:00:58.922  INFO 17700 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-03 21:01:02.810  INFO 25464 --- [restartedMain] org.example.BankStart                    : Starting BankStart using Java 23.0.2 on Home-PC with PID 25464 (C:\Users\Valera\Desktop\untitled\target\classes started by Valera in C:\Users\Valera\Desktop\untitled)
+2026-02-03 21:01:02.812  INFO 25464 --- [restartedMain] org.example.BankStart                    : No active profile set, falling back to 1 default profile: "default"
+2026-02-03 21:01:02.874  INFO 25464 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-03 21:01:02.875  INFO 25464 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-03 21:01:03.557  INFO 25464 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-03 21:01:03.591  INFO 25464 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interfaces.
+2026-02-03 21:01:04.166  INFO 25464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-02-03 21:01:04.175  INFO 25464 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-03 21:01:04.175  INFO 25464 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2026-02-03 21:01:04.234  INFO 25464 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-03 21:01:04.234  INFO 25464 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1359 ms
+2026-02-03 21:01:04.305  INFO 25464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-03 21:01:04.485  INFO 25464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-03 21:01:04.568  INFO 25464 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-03 21:01:04.614  INFO 25464 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2026-02-03 21:01:04.788  INFO 25464 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-03 21:01:04.931  INFO 25464 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2026-02-03 21:01:05.442  INFO 25464 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-03 21:01:05.448  INFO 25464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-03 21:01:05.856  WARN 25464 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-03 21:01:06.564  INFO 25464 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-03 21:01:06.600  INFO 25464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-02-03 21:01:06.606  INFO 25464 --- [restartedMain] org.example.BankStart                    : Started BankStart in 4.148 seconds (JVM running for 4.498)
+2026-02-03 21:01:06.610  INFO 25464 --- [restartedMain] org.example.BankStart                    : Начало работы приложения Tue Feb 03 21:01:06 MSK 2026
+2026-02-03 21:01:40.819  INFO 25464 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-03 21:01:40.821  INFO 25464 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-03 21:01:40.825  INFO 25464 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
