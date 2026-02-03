@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/tgbot
+    username: postgres
+    password: Hoolidey
+  jpa:
+    show-sql: true
+    generate-ddl: false
+    hibernate.ddl-auto: update
+    properties:
+      hibernate.jdbc.lob.non_contextual_creation: true
+
+logging:
+  file:
+    name: application.log

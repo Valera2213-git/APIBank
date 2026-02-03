@@ -1,0 +1,51 @@
+2026-02-03 20:42:59.796  INFO 24480 --- [restartedMain] org.example.BankStart                    : Starting BankStart using Java 23.0.2 on Home-PC with PID 24480 (C:\Users\Valera\Desktop\untitled\target\classes started by Valera in C:\Users\Valera\Desktop\untitled)
+2026-02-03 20:42:59.804  INFO 24480 --- [restartedMain] org.example.BankStart                    : No active profile set, falling back to 1 default profile: "default"
+2026-02-03 20:42:59.867  INFO 24480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-03 20:42:59.868  INFO 24480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-03 20:43:00.665  INFO 24480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-03 20:43:00.701  INFO 24480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interfaces.
+2026-02-03 20:43:01.359  INFO 24480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-02-03 20:43:01.372  INFO 24480 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-03 20:43:01.373  INFO 24480 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2026-02-03 20:43:01.436  INFO 24480 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-03 20:43:01.436  INFO 24480 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1567 ms
+2026-02-03 20:43:01.531  INFO 24480 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-03 20:43:01.805  INFO 24480 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-03 20:43:01.895  INFO 24480 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-03 20:43:01.970  INFO 24480 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2026-02-03 20:43:02.197  INFO 24480 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-03 20:43:02.356  INFO 24480 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2026-02-03 20:43:02.858  INFO 24480 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-03 20:43:02.863  INFO 24480 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-03 20:43:03.308  WARN 24480 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-03 20:43:04.114  INFO 24480 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-03 20:43:04.148  INFO 24480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-02-03 20:43:04.157  INFO 24480 --- [restartedMain] org.example.BankStart                    : Started BankStart in 4.761 seconds (JVM running for 5.252)
+2026-02-03 20:43:04.160  INFO 24480 --- [restartedMain] org.example.BankStart                    : Начало работы приложения Tue Feb 03 20:43:04 MSK 2026
+2026-02-03 20:46:39.259  INFO 24480 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-03 20:46:39.262  INFO 24480 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-03 20:46:39.264  INFO 24480 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-03 20:48:32.608  INFO 6296 --- [restartedMain] org.example.BankStart                    : Starting BankStart using Java 23.0.2 on Home-PC with PID 6296 (C:\Users\Valera\Desktop\untitled\target\classes started by Valera in C:\Users\Valera\Desktop\untitled)
+2026-02-03 20:48:32.610  INFO 6296 --- [restartedMain] org.example.BankStart                    : No active profile set, falling back to 1 default profile: "default"
+2026-02-03 20:48:32.690  INFO 6296 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-03 20:48:32.690  INFO 6296 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-03 20:48:33.526  INFO 6296 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-03 20:48:33.565  INFO 6296 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interfaces.
+2026-02-03 20:48:34.142  INFO 6296 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-02-03 20:48:34.157  INFO 6296 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-03 20:48:34.157  INFO 6296 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2026-02-03 20:48:34.232  INFO 6296 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-03 20:48:34.232  INFO 6296 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1541 ms
+2026-02-03 20:48:34.327  INFO 6296 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-03 20:48:34.552  INFO 6296 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-03 20:48:34.640  INFO 6296 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-03 20:48:34.710  INFO 6296 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2026-02-03 20:48:34.928  INFO 6296 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-03 20:48:35.070  INFO 6296 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2026-02-03 20:48:35.634  INFO 6296 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-03 20:48:35.642  INFO 6296 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-03 20:48:36.050  WARN 6296 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-03 20:48:36.850  INFO 6296 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-03 20:48:36.888  INFO 6296 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-02-03 20:48:36.900  INFO 6296 --- [restartedMain] org.example.BankStart                    : Started BankStart in 4.807 seconds (JVM running for 5.22)
+2026-02-03 20:48:36.903  INFO 6296 --- [restartedMain] org.example.BankStart                    : Начало работы приложения Tue Feb 03 20:48:36 MSK 2026
