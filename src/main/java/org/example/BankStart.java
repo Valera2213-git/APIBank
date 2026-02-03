@@ -14,8 +14,6 @@ public class BankStart {
         log.info("Начало сборки контекста " + new Date());
         SpringApplication.run(BankStart.class, args);
         log.info("Начало работы приложения " + new Date());
-
-
     }
 }
 
