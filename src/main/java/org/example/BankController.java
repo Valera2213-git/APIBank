@@ -8,8 +8,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
-
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -43,11 +45,19 @@ public class BankController {
         Optional<User> optionalUser = userService.findUserById(id);
         if (optionalUser.isPresent()) {
             User user = optionalUser.get();
+            List<Operations> operationsList = user.getOperations();
             if (sum > 0.0) {
                 user.setBalance(user.getBalance() + sum);
+
                 LocalDate date = LocalDate.now();
+
+                operationsList.add(new Operations(date, EnumOperations.PUT_MONEY, sum));
+
+                user.setOperations(operationsList);
+
                 userService.save(user);
                 logger.info("Пополнение счёта пользователя " + user.getName() + " на " + sum + " $ прошло успешно!");
+
                 return new ResponseEntity<>(user.getBalance(), HttpStatus.OK);
             }
             logger.info("Сумма:" + sum + " меньше 0");
@@ -64,12 +74,19 @@ public class BankController {
         Optional<User> optionalUser = userService.findUserById(id);
         if (optionalUser.isPresent()) {
             User user = optionalUser.get();
+            List<Operations> operationsList = user.getOperations();
             if (sum > 0.0 && user.getBalance() - sum > 0.0) {
                 user.setBalance(user.getBalance() - sum);
+
                 LocalDate date = LocalDate.now();
+
+                operationsList.add(new Operations(date, EnumOperations.TAKE_MONEY, sum));
+
+                user.setOperations(operationsList);
 
                 userService.save(user);
                 logger.info("Снятие со счёта пользователя " + user.getName() + " " + sum + " $ прошло успешно!");
+
                 return new ResponseEntity<>(user.getBalance(), HttpStatus.OK);
             }
             logger.info("Введёная сумма:" + sum + " меньше 0, либо у пользователя не хватает средств на счёте");
@@ -79,5 +96,43 @@ public class BankController {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 
     }
+    @Transactional
+    @PostMapping(value = "/transfer/{idFrom}/{idTo}")
+    @Operation(summary = "Запрос на перевод денег между пользователями по их ID")
+    public ResponseEntity<List<Double>> transferMoney(@PathVariable(name = "idFrom") Long idFrom,
+                                                      @PathVariable(name = "idTo") Long idTo,@RequestParam("sum") Double sum) {
+        Optional<User> optionalUserFrom = userService.findUserById(idFrom);
+        Optional<User> optionalUserTo = userService.findUserById(idTo);
+        if (optionalUserFrom.isPresent() && optionalUserTo.isPresent()) {
+            User userFrom = optionalUserFrom.get();
+            User userTo = optionalUserTo.get();
+            List<Operations> operationsListFrom = userFrom.getOperations();
+            List<Operations> operationsListTo = userTo.getOperations();
+            if (sum > 0.0 && userFrom.getBalance() - sum > 0.0) {
+                userFrom.setBalance(userFrom.getBalance() - sum);
+                userTo.setBalance(userTo.getBalance() + sum);
 
+                LocalDate date = LocalDate.now();
+
+                operationsListFrom.add(new Operations(date, EnumOperations.TRANSFER_FROM_CLIENT, sum));
+                operationsListTo.add(new Operations(date, EnumOperations.TRANSFER_TO_CLIENT, sum));
+
+                userFrom.setOperations(operationsListFrom);
+                userTo.setOperations(operationsListTo);
+
+                userService.save(userFrom);
+                userService.save(userTo);
+
+                List<Double> users = new ArrayList<>(Arrays.asList(userFrom.getBalance(),userTo.getBalance()));
+
+                logger.info("Перевод денег от " + userFrom.getName() + " на счёт " + userTo.getName() + " в размере: " + sum + " $ прошёл успешно!");
+
+                return new ResponseEntity<>(users, HttpStatus.OK);
+            }
+            logger.info("Введёная сумма:" + sum + " меньше 0, либо у пользователя не хватает средств на счёте");
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+        logger.info("Пользователь с ID:" + idFrom + "или " + idTo + " не найден");
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
 }
