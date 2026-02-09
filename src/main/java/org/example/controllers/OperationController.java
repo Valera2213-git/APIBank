@@ -1,5 +1,8 @@
-package org.example;
+package org.example.controllers;
 
+import org.example.entities.Operations;
+import org.example.entities.User;
+import org.example.repositories.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

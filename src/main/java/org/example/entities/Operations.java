@@ -1,8 +1,7 @@
-package org.example;
+package org.example.entities;
 
 import javax.persistence.*;
 import lombok.Data;
-import org.example.EnumOperations;
 
 import java.time.LocalDate;
 
